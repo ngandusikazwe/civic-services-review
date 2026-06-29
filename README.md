@@ -2,6 +2,8 @@
 
 A full-stack implementation of Assignment B from the Full-Stack Developer assessment.
 
+Repository: https://github.com/ngandusikazwe/civic-services-review
+
 The product scenario is a local-government service request portal. A citizen or business
 submits a civic request, such as a business permit, building permit, public-works repair,
 community grant, or general service case. A case officer reviews submitted requests,
