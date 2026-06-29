@@ -1,0 +1,23 @@
+{
+  "name": "submission-approval-workflow",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter @workflow/workflow build && pnpm --parallel --filter @workflow/api --filter @workflow/web dev",
+    "dev:api": "pnpm --filter @workflow/workflow build && pnpm --filter @workflow/api dev",
+    "dev:web": "pnpm --filter @workflow/workflow build && pnpm --filter @workflow/web dev",
+    "build": "pnpm -r build",
+    "test": "pnpm --filter @workflow/workflow build && pnpm -r test",
+    "lint": "pnpm -r lint",
+    "db:migrate": "pnpm --filter @workflow/api db:migrate",
+    "db:seed": "pnpm --filter @workflow/api db:seed"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.8.3",
+    "vitest": "^3.0.7"
+  },
+  "packageManager": "pnpm@10.23.0"
+}
