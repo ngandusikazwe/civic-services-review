@@ -28,6 +28,15 @@ Demo accounts:
 | Citizen requester | `ben@example.com` | `password123` |
 | Case officer | `reviewer@example.com` | `password123` |
 
+## Authentication UX
+
+The app intentionally uses a single sign-in screen for both citizen requesters
+and case officers. I chose this over separate "citizen" and "officer" portals
+because the assessment is focused on real server-side role enforcement rather
+than multiple login surfaces. After sign-in, the frontend renders the correct
+workspace for the authenticated role, while the backend still enforces every
+authorization rule on protected mutations and queue visibility.
+
 ## Tech Stack
 
 - Frontend: React, TypeScript, Vite
