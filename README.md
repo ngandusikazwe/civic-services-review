@@ -18,7 +18,9 @@ resubmits the request.
 
 ## Live URL
 
-Pending deployment. Replace this line with the hosted URL before submitting.
+https://civic-services-review.onrender.com
+
+Health check: https://civic-services-review.onrender.com/api/health
 
 Demo accounts:
 
