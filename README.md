@@ -77,6 +77,21 @@ The API Docker image builds both the backend and the React frontend. In producti
 the Express server serves the compiled frontend and the REST API from the same
 origin, so a deployment can run as one web service plus PostgreSQL.
 
+### Render Blueprint
+
+This repository includes `render.yaml`, which provisions:
+
+- one Docker web service for the API + compiled React frontend
+- one Render Postgres database
+
+In Render, create a new Blueprint from this GitHub repository and let Render
+apply the `render.yaml` file. If you keep the default service name, the app URL
+will be:
+
+```text
+https://civic-services-review.onrender.com
+```
+
 Required environment variables:
 
 - `DATABASE_URL`

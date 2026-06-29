@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: civic-services-review
+    runtime: docker
+    plan: free
+    dockerfilePath: ./apps/api/Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: civic-services-review-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PORT
+        value: 10000
+      - key: WEB_ORIGIN
+        value: https://civic-services-review.onrender.com
+
+databases:
+  - name: civic-services-review-db
+    plan: free
+    databaseName: civic_services_review
+    user: civic_services_review
+    ipAllowList: []
